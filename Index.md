@@ -1,11 +1,22 @@
-```c
-SqlConnection Baglanti = new SqlConnection();
-Baglanti.ConnectionString = @"Data Source=.\SqlExpress; Initial Catalog=dbOkul; Integrated Security=true";
+SQL VeriTabanına Veri Ekleme
 
-SqlCommand komut = new SqlCommand();
-komut.CommandText = "INSERT INTO Ogrenci VALUES ('321','Mark','Zuck')";
+veritabanına baglanma
+
+```a
+SqlConnection Baglanti = new SqlConnection();
+Baglanti.ConnectionString=@"Data Source=.\SqlExpress; Initial Catalog = VeriTaban Adı; Integrated Security = True;";
+```
+```c
+SqlCommand Komut = new SqlCommand();
+Komut.CommandText = @"Insert Into Tablo Adi (AlanAdi, AlanAdi) Values (@Ad, @Soyad)";
+
+Komut.Parameters.AddWithValue("@Ad", textBox1.Text);
+Komut.Parameters.AddWithValue("@Soyad", textBox2.Text);
 
 Baglanti.Open();
-komut.ExecuteNonQuery();
-Baglanti.Close();
+Komut.ExecuteNonQuery();
+Baglanti.CLose();
+
+MessageBox.Show("Kişi bilgileri kaydedildi");
 ```
+
