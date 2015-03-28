@@ -1,10 +1,11 @@
-## Table of contents
+'''c
+SqlConnection Baglanti = new SqlConnection();
+Baglanti.ConnectionString = @"Data Source=.\SqlExpress; Initial Catalog=dbOkul; Integrated Security=true";
 
-- [Quick start](#quick-start)
-- [Bugs and feature requests](#bugs-and-feature-requests)
-- [Documentation](#documentation)
-- [Contributing](#contributing)
-- [Community](#community)
-- [Versioning](#versioning)
-- [Creators](#creators)
-- [Copyright and license](#copyright-and-license)
+SqlCommand komut = new SqlCommand();
+komut.CommandText = "INSERT INTO Ogrenci VALUES ('321','Mark','Zuck')";
+
+Baglanti.Open();
+komut.ExecuteNonQuery();
+Baglanti.Close();
+'''
