@@ -1,4 +1,4 @@
-'''c
+```c
 SqlConnection Baglanti = new SqlConnection();
 Baglanti.ConnectionString = @"Data Source=.\SqlExpress; Initial Catalog=dbOkul; Integrated Security=true";
 
@@ -8,4 +8,4 @@ komut.CommandText = "INSERT INTO Ogrenci VALUES ('321','Mark','Zuck')";
 Baglanti.Open();
 komut.ExecuteNonQuery();
 Baglanti.Close();
-'''
+```
